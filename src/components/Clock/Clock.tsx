@@ -20,7 +20,7 @@ export class Clock extends React.Component<Props, State> {
       const now = new Date();
 
       // eslint-disable-next-line no-console
-      console.log(now);
+      console.log(now.toUTCString().slice(-12, -4));
       this.setState({ today: now });
     }, 1000);
   }
